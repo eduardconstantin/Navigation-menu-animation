@@ -8,15 +8,11 @@
 	height: 45px;
 	background-color: rgb(117, 212, 232);
 	border: 2px solid #157c95;
-	-webkit-box-shadow: inset 0px 0px 0px 1.5px
-		rgba(255, 255, 255, 0.4);
-	box-shadow: inset 0px 0px 0px 1.5px
-		rgba(255, 255, 255, 0.4);
+	-webkit-box-shadow: inset 0px 0px 0px 1.5px rgba(255, 255, 255, 0.4);
+	box-shadow: inset 0px 0px 0px 1.5px rgba(255, 255, 255, 0.4);
 	transform: rotateZ(45deg);
 	padding: 0;
-	filter: drop-shadow(
-		0px 5px 20px rgba(2, 113, 141, 0.5)
-	);
+	filter: drop-shadow(0px 5px 20px rgba(2, 113, 141, 0.5));
 }
 
 .menuButton svg {
@@ -33,15 +29,7 @@
 	top: -12px;
 	width: 500px;
 	height: 70px;
-	clip-path: polygon(
-		42% -2%,
-		50% 51%,
-		58% -2%,
-		100% 0,
-		100% 100%,
-		0 100%,
-		0 0
-	);
+	clip-path: polygon(42% -2%, 50% 51%, 58% -2%, 100% 0, 100% 100%, 0 100%, 0 0);
 	background: #abadb4;
 }
 .menuWrapper:after {
@@ -52,15 +40,7 @@
 	left: 3.4px;
 	right: 3.4px;
 	bottom: 3.5px;
-	clip-path: polygon(
-		41.9% 0%,
-		50% 58.2%,
-		58.1% 0,
-		100% 0,
-		100% 100%,
-		0 100%,
-		0 0
-	);
+	clip-path: polygon(41.9% 0%, 50% 58.2%, 58.1% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 .menuWrapper:before {
 	content: '';
@@ -70,15 +50,7 @@
 	left: 2px;
 	right: 2px;
 	bottom: 2px;
-	clip-path: polygon(
-		42% 0,
-		50% 55%,
-		58% 0,
-		100% 0,
-		100% 100%,
-		0 100%,
-		0 0
-	);
+	clip-path: polygon(42% 0, 50% 55%, 58% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 
 .menuList {
@@ -100,22 +72,4 @@
 }
 .menuList li:nth-child(3) {
 	width: 70%;
-}
-
-.menuList li svg {
-	width: 1.6rem;
-}
-
-.menuList li p {
-	font-family: 'Dosis', sans-serif;
-	font-size: 12px;
-	color: #5d606f;
-	margin: 0;
-}
-
-.listButton {
-	width: 45%;
-	background-color: transparent;
-	border: none;
-	padding: 0;
 }
