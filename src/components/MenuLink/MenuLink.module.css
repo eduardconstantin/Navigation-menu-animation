@@ -1,0 +1,18 @@
+.listButton {
+	width: 45%;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}
+
+.listButton p {
+	font-family: 'Dosis', sans-serif;
+	font-size: 12px;
+	color: #5d606f;
+	margin: 0;
+}
+
+.listButton svg {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
