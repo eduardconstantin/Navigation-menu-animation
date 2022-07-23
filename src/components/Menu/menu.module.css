@@ -3,6 +3,7 @@
 	margin-top: 20%;
 	perspective: 500px;
 }
+
 .menuButton {
 	width: 45px;
 	height: 45px;
@@ -14,7 +15,6 @@
 	padding: 0;
 	filter: drop-shadow(0px 5px 20px rgba(2, 113, 141, 0.5));
 }
-
 .menuButton svg {
 	transform: rotateZ(-45deg);
 	fill: #fbfbfc;
@@ -23,6 +23,7 @@
 	height: 30px;
 	margin: auto;
 }
+
 .menuWrapper {
 	opacity: 0;
 	position: relative;
@@ -61,7 +62,7 @@
 	list-style: none;
 	height: 100%;
 	margin: 0;
-	padding: 0;
+	padding: 0 0.5rem;
 }
 .menuList li {
 	width: 100%;
@@ -70,6 +71,9 @@
 	display: flex;
 	flex-direction: column;
 }
-.menuList li:nth-child(3) {
-	width: 70%;
+.menuList.long li:nth-child(2) {
+	margin-right: 3rem;
+}
+.menuList.long li:nth-child(3) {
+	margin-left: 3rem;
 }
