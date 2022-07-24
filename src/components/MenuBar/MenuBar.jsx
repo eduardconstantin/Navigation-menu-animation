@@ -25,7 +25,7 @@ export default function MenuBar({ menuElements, isOpen, angle }) {
 				{menuElements.map((el) => {
 					return (
 						<li key={el.buttonLabel}>
-							<MenuLink icon={el.buttonIcon} buttonLabel={el.buttonLabel} onClick={el.onClick} />
+							<MenuLink buttonIcon={el.buttonIcon} buttonLabel={el.buttonLabel} onClick={el.onClick} />
 						</li>
 					);
 				})}
