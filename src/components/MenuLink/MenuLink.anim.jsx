@@ -1,4 +1,4 @@
-export const IconAnim = {
+export const iconAnim = {
 	hover: {
 		color: '#157C95',
 		fill: '#157C95',
@@ -21,7 +21,7 @@ export const IconAnim = {
 	},
 };
 
-export const LabelAnim = {
+export const labelAnim = {
 	hover: {
 		color: '#157C95',
 		fill: '#157C95',
