@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { IconAnim, LabelAnim } from './MenuLink.anim';
+import { iconAnim, labelAnim } from './MenuLink.anim';
 import { GoGlobe } from 'react-icons/go';
 import style from './MenuLink.module.css';
 
-export default function MenuLink({ icon = <GoGlobe />, buttonLabel = 'Default', onClick }) {
+export default function MenuLink({ buttonIcon, buttonLabel, onClick }) {
 	return (
 		<motion.button
 			initial='initial'
@@ -14,8 +14,16 @@ export default function MenuLink({ icon = <GoGlobe />, buttonLabel = 'Default', 
 			className={style.listButton}
 			onClick={onClick}
 		>
-			<motion.div variants={IconAnim}>{icon}</motion.div>
-			<motion.p variants={LabelAnim}>{buttonLabel.toUpperCase()}</motion.p>
+			<motion.div variants={iconAnim}>{buttonIcon}</motion.div>
+			<motion.p variants={labelAnim}>{buttonLabel.toUpperCase()}</motion.p>
 		</motion.button>
 	);
 }
+
+MenuLink.defaultProps = {
+	buttonIcon: <GoGlobe />,
+	buttonLabel: 'Default',
+	onClick: (event) => {
+		console.log(event);
+	},
+};
