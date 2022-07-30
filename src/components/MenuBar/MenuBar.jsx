@@ -7,21 +7,24 @@ import style from './MenuBar.module.css';
 export default function MenuBar({ menuElements, isOpen, angle }) {
 	const x = useMotionValue(0);
 	const rotateY = useTransform(x, [0, 500], [-angle, angle]);
-	function handleMouse(event) {
+
+	const handleMouse = (event) => {
 		const rect = event.currentTarget.getBoundingClientRect();
 		x.set(event.clientX - rect.left);
-	}
+	};
+
+	const menuClasses = { 2: style.menuSmall, 4: style.menuMedium, 6: style.menuLarge, 8: style.menuXlarge };
 
 	return (
 		<motion.div
-			className={style.menuWrapper}
+			className={`${style.menuWrapper} ${menuClasses[menuElements.length]}`}
 			variants={menuAnim}
 			initial='closed'
 			animate={isOpen ? 'open' : 'closed'}
 			onMouseMove={handleMouse}
 			style={{ rotateY: rotateY }}
 		>
-			<ul className={`${style.menuList} ${style.long}`}>
+			<ul className={style.menuList}>
 				{menuElements.map((el) => {
 					return (
 						<li key={el.buttonLabel}>

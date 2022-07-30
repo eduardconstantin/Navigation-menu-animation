@@ -1,6 +1,5 @@
 /* MenuBar style */
 .menuWrapper {
-	opacity: 0;
 	position: relative;
 	top: -12px;
 	width: 500px;
@@ -46,9 +45,10 @@
 	display: flex;
 	flex-direction: column;
 }
-.menuList.long li:nth-child(2) {
+
+.menuWrapper.menuMedium .menuList li:nth-child(2) {
 	margin-right: 3rem;
 }
-.menuList.long li:nth-child(3) {
+.menuWrapper.menuMedium .menuList li:nth-child(3) {
 	margin-left: 3rem;
 }
