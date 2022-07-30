@@ -41,6 +41,7 @@
 	display: flex;
 	flex-direction: column;
 }
+/*================ Menu bar ================*/
 
 /*================ Small menu ================*/
 .menuWrapper.menuSmall {
@@ -60,3 +61,22 @@
 	margin-left: 2rem;
 }
 /*================ Small menu ================*/
+
+/*================ Medium menu ================*/
+.menuWrapper.menuMedium {
+	width: 500px;
+	clip-path: polygon(42% -2%, 50% 51%, 58% -2%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuMedium:after {
+	clip-path: polygon(41.9% 0%, 50% 58.2%, 58.1% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuMedium:before {
+	clip-path: polygon(42% 0, 50% 55%, 58% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuMedium .menuList li:nth-child(2) {
+	margin-right: 3rem;
+}
+.menuWrapper.menuMedium .menuList li:nth-child(3) {
+	margin-left: 3rem;
+}
+/*================ Medium menu ================*/
