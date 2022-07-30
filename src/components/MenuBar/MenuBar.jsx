@@ -4,7 +4,7 @@ import { motion, useTransform, useMotionValue } from 'framer-motion';
 import { menuAnim } from './Menu.anim';
 import style from './MenuBar.module.css';
 
-export default function MenuBar({ menuElements, isOpen, angle }) {
+export default function MenuBar({ menuElements, menuSize, isOpen, angle }) {
 	const x = useMotionValue(0);
 	const rotateY = useTransform(x, [0, 500], [-angle, angle]);
 
@@ -17,7 +17,7 @@ export default function MenuBar({ menuElements, isOpen, angle }) {
 
 	return (
 		<motion.div
-			className={`${style.menuWrapper} ${menuClasses[menuElements.length]}`}
+			className={`${style.menuWrapper} ${menuClasses[menuSize || menuElements.length]}`}
 			variants={menuAnim}
 			initial='closed'
 			animate={isOpen ? 'open' : 'closed'}
@@ -65,6 +65,7 @@ const defaultElements = [
 ];
 
 MenuBar.defaultProps = {
+	menuSize: null,
 	isOpen: 'closed',
 	angle: 5,
 	menuElements: defaultElements,
