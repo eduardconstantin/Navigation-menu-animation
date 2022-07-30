@@ -80,3 +80,22 @@
 	margin-left: 3rem;
 }
 /*================ Medium menu ================*/
+
+/*================ Large menu ================*/
+.menuWrapper.menuLarge {
+	width: 650px;
+	clip-path: polygon(44% -2%, 50% 51%, 56% -2%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuLarge:after {
+	clip-path: polygon(43.9% 0%, 50% 58.2%, 56.1% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuLarge:before {
+	clip-path: polygon(44% 0, 50% 55%, 56% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuLarge .menuList li:nth-child(3) {
+	margin-right: 3rem;
+}
+.menuWrapper.menuLarge .menuList li:nth-child(4) {
+	margin-left: 3rem;
+}
+/*================ Large menu ================*/
