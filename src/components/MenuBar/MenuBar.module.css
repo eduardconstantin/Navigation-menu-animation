@@ -32,7 +32,7 @@
 	list-style: none;
 	height: 100%;
 	margin: 0;
-	padding: 0 0.5rem;
+	padding: 0 2%;
 }
 .menuList li {
 	width: 100%;
@@ -40,6 +40,13 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+}
+
+.menuList li.leftElement {
+	margin-right: 2.5rem;
+}
+.menuList li.rightElement {
+	margin-left: 2.5rem;
 }
 /*================ Menu bar ================*/
 
@@ -54,12 +61,6 @@
 .menuWrapper.menuSmall:before {
 	clip-path: polygon(39% 0, 50% 55%, 61% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
-.menuWrapper.menuSmall .menuList li:nth-child(1) {
-	margin-right: 2rem;
-}
-.menuWrapper.menuSmall .menuList li:nth-child(2) {
-	margin-left: 2rem;
-}
 /*================ Small menu ================*/
 
 /*================ Medium menu ================*/
@@ -72,12 +73,6 @@
 }
 .menuWrapper.menuMedium:before {
 	clip-path: polygon(42% 0, 50% 55%, 58% 0, 100% 0, 100% 100%, 0 100%, 0 0);
-}
-.menuWrapper.menuMedium .menuList li:nth-child(2) {
-	margin-right: 3rem;
-}
-.menuWrapper.menuMedium .menuList li:nth-child(3) {
-	margin-left: 3rem;
 }
 /*================ Medium menu ================*/
 
@@ -92,10 +87,17 @@
 .menuWrapper.menuLarge:before {
 	clip-path: polygon(44% 0, 50% 55%, 56% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
-.menuWrapper.menuLarge .menuList li:nth-child(3) {
-	margin-right: 3rem;
-}
-.menuWrapper.menuLarge .menuList li:nth-child(4) {
-	margin-left: 3rem;
-}
 /*================ Large menu ================*/
+
+/*================ Extra Large menu ================*/
+.menuWrapper.menuXlarge {
+	width: 800px;
+	clip-path: polygon(45% -2%, 50% 51%, 55% -2%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuXlarge:after {
+	clip-path: polygon(44.9% 0%, 50% 58.2%, 55.1% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.menuWrapper.menuXlarge:before {
+	clip-path: polygon(45% 0, 50% 55%, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+/*================ Extra Large menu ================*/
