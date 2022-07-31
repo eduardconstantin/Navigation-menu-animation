@@ -23,7 +23,5 @@ export default function MenuLink({ buttonIcon, buttonLabel, onClick }) {
 MenuLink.defaultProps = {
 	buttonIcon: <GoGlobe />,
 	buttonLabel: 'Default',
-	onClick: (event) => {
-		console.log(event);
-	},
+	onClick: () => {},
 };
