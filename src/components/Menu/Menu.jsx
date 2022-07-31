@@ -4,39 +4,8 @@ import { motion } from 'framer-motion';
 import { BsList, BsFillBootstrapFill } from 'react-icons/bs';
 import style from './menu.module.css';
 
-export default function Menu() {
+export default function Menu({ menuIcon, menuElements, tiltAngle, menuSize }) {
 	const [isOpen, setIsOpen] = useState(false);
-
-	const menuElements = [
-		{
-			buttonIcon: <BsFillBootstrapFill />,
-			buttonLabel: 'test',
-			onClick: () => {
-				console.log('test');
-			},
-		},
-		{
-			buttonIcon: <BsFillBootstrapFill />,
-			buttonLabel: 'test1',
-			onClick: () => {
-				console.log('test1');
-			},
-		},
-		{
-			buttonIcon: <BsFillBootstrapFill />,
-			buttonLabel: 'test2',
-			onClick: () => {
-				console.log('test2');
-			},
-		},
-		{
-			buttonIcon: <BsFillBootstrapFill />,
-			buttonLabel: 'test3',
-			onClick: () => {
-				console.log('test3');
-			},
-		},
-	];
 
 	return (
 		<motion.div className={style.menuContainer}>
@@ -47,9 +16,39 @@ export default function Menu() {
 				initial={{ translateZ: 0, rotateZ: 45 }}
 				whileTap={{ translateZ: -60 }}
 			>
-				<BsList />
+				{menuIcon}
 			</motion.button>
-			<MenuBar isOpen={isOpen} menuElements={menuElements} />
+			<MenuBar isOpen={isOpen} menuElements={menuElements} angle={tiltAngle} menuSize={menuSize} />
 		</motion.div>
 	);
 }
+
+const defaultElements = [
+	{
+		buttonIcon: <BsFillBootstrapFill />,
+		buttonLabel: 'element1',
+		onClick: () => {},
+	},
+	{
+		buttonIcon: <BsFillBootstrapFill />,
+		buttonLabel: 'element2',
+		onClick: () => {},
+	},
+	{
+		buttonIcon: <BsFillBootstrapFill />,
+		buttonLabel: 'element3',
+		onClick: () => {},
+	},
+	{
+		buttonIcon: <BsFillBootstrapFill />,
+		buttonLabel: 'element4',
+		onClick: () => {},
+	},
+];
+
+Menu.defaultProps = {
+	menuIcon: <BsList />,
+	menuSize: null,
+	tiltAngle: 5,
+	menuElements: defaultElements,
+};
