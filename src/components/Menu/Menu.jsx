@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { BsList, BsFillBootstrapFill } from 'react-icons/bs';
 import style from './menu.module.css';
 
-export default function Menu({ menuElements, tiltAngle, menuSize }) {
+export default function Menu({ menuIcon, menuElements, tiltAngle, menuSize }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
@@ -16,7 +16,7 @@ export default function Menu({ menuElements, tiltAngle, menuSize }) {
 				initial={{ translateZ: 0, rotateZ: 45 }}
 				whileTap={{ translateZ: -60 }}
 			>
-				<BsList />
+				{menuIcon}
 			</motion.button>
 			<MenuBar isOpen={isOpen} menuElements={menuElements} angle={tiltAngle} menuSize={menuSize} />
 		</motion.div>
@@ -47,6 +47,7 @@ const defaultElements = [
 ];
 
 Menu.defaultProps = {
+	menuIcon: <BsList />,
 	menuSize: null,
 	tiltAngle: 5,
 	menuElements: defaultElements,
