@@ -17,9 +17,9 @@ export default function MenuBar({ menuElements, menuSize, isOpen, angle }) {
 	const menuClasses = { 2: style.menuSmall, 4: style.menuMedium, 6: style.menuLarge, 8: style.menuXlarge };
 
 	const addMiddleGap = (index, length) => {
-		if (index == Math.floor((length - 1) / 2)) {
+		if (index === Math.floor((length - 1) / 2)) {
 			return style.leftElement;
-		} else if (index == Math.ceil((length - 1) / 2)) {
+		} else if (index === Math.ceil((length - 1) / 2)) {
 			return style.rightElement;
 		}
 	};
