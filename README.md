@@ -105,3 +105,6 @@ I recommend using react icons for menu and button icons.
 		</tr>
 	</tbody>
 </table>
+
+## Contributing
+If you think you can make an improvement don't hesitate to open a pull request.
