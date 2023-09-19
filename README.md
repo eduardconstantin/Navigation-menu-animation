@@ -1,5 +1,7 @@
 # Navigation menu animation concept
 
+## THIS REPO HAS BEEN ARCHIVED AND THE CONTENT HAS BEEN MOVED TO [THIS ONE](https://github.com/eduardconstantin/react-motion-components)
+
 This was a good experiment to learn a few new tools that I wanted to use for a long time.
 
 What I learned making this project:
